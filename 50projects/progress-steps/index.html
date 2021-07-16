@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>progress-step</title>
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="progress-container">
+				<div id="progress" class="progress-line" style="width:0%;"></div>
+				<div class="step step1 active">1</div>
+				<div class="step step2">2</div>
+				<div class="step step3">3</div>
+				<div class="step step4">4</div>
+			</div>
+			<div class="stepBtn">
+				<button id="prev">Prev</button>
+				<button id="next">Next</button>
+			</div>
+		</div>
+		<script>
+			let curStep = 0;
+			let prev = document.querySelector("#prev");
+			let next = document.querySelector("#next");
+			let btn = document.querySelector(".stepBtn");
+			let progress = document.querySelector("#progress");
+			let steps = document.querySelectorAll(".step");
+
+			btn.addEventListener("click", (e) => {
+				e = e || window.event;
+				if (e.target.id === "prev") {
+          steps[curStep].classList.remove("active")
+					curStep--;
+				} else {
+					curStep++;
+          steps[curStep].classList.add("active")
+				}
+				update();
+			});
+			function update() {
+				if (curStep === 0) {
+					prev.disabled = true;
+					prev.classList.add("disabled");
+				} else if (curStep === 3) {
+					next.disabled = true;
+					next.classList.add("disabled");
+				} else {
+					prev.disabled = false;
+					prev.classList.remove("disabled");
+          next.disabled = false;
+					next.classList.remove("disabled");
+				}
+				progress.style.width = curStep * 33.34 + "%";
+			}
+		</script>
+	</body>
+</html>
