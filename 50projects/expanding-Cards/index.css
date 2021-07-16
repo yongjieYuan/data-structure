@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+:root {
+    --sr-annote-color-0: #b4d9fb;
+    --sr-annote-color-1: #ffeb3b;
+    --sr-annote-color-2: #a2e9f2;
+    --sr-annote-color-3: #a1e0ff;
+    --sr-annote-color-4: #a8ea68;
+    --sr-annote-color-5: #ffb7da;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Muli', sans-serif;
+  height: 100vh;
+  margin: 0 ;
+}
+.container {
+  display: flex;
+  width: 90vw;
+}
+.card {
+  position: relative;
+  flex: .5;
+  margin: 10px;
+  height: 80vh;
+  border-radius: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: flex .7s ease-in;
+  cursor: pointer;
+}
+.active {
+  flex: 5;
+}
+.card h3 {
+  position: absolute;
+  font-size: 24px;
+  color: #fff;
+  left: 20px;
+  bottom: 20px;
+  opacity: 0;
+  transition: opacity .3s ease-in 0.4s;
+}
+.card.active h3 {
+  opacity: 1;
+}

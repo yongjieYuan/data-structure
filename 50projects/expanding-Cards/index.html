@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>expanding cards</title>
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body>
+    <div class="container">
+      <div class="card card-1 active" style="background-image: url(https://gitee.com/littleJshao/figure-bed/raw/master/images/dragon-2.jpg)">
+      <h3>小林家的龙女仆-托尔</h3>
+    </div>
+      <div class="card card-2" style="background-image: url(https://gitee.com/littleJshao/figure-bed/raw/master/images/dragon-1.jpg)">
+      <h3>小林家的龙女仆-人物</h3>
+    </div>
+      <div class="card card-3" style="background-image: url(https://gitee.com/littleJshao/figure-bed/raw/master/images/star-1.jpg)">
+      <h3>北极-极光</h3>
+    </div>
+      <div class="card card-4" style="background-image: url(https://gitee.com/littleJshao/figure-bed/raw/master/images/HJRJ-01.jpg)">
+      <h3>海街日记-大姐一家</h3>
+    </div>
+      <div class="card card-5" style="background-image: url(https://gitee.com/littleJshao/figure-bed/raw/master/images/girl-1.jpg)">
+      <h3>插画-女孩</h3>
+    </div>
+    </div>
+		<script>
+      let card = document.querySelectorAll('.card')
+      card.forEach((item, index) => {
+        item.addEventListener('click',()=>{
+          console.log(remove);
+          remove()
+          item.classList.add('active')
+        })
+      })
+      function remove(){
+        card.forEach((item, index) => {
+          item.classList.remove('active')
+        })
+      }
+		</script>
+	</body>
+</html>
