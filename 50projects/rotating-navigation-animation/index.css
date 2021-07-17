@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #333;
+  color: #222;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+button{
+  width: 50%;
+  height: 100%;
+  border: 0;
+  outline: none;
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+}
+i.iconfont {
+  font-size: 26px;
+}
+
+.circle {
+  overflow: hidden;
+  position: fixed;
+  margin-left: -100px;
+  margin-top: -100px;
+  background-color: #ff7979;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  z-index: 9;
+  transition: transform .5s linear;
+}
+.circle-container {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 50%;
+}
+.content {
+  padding: 50px;
+  padding-top: 100px;
+  min-height: 100vh;
+  background-color: #fafafa;
+  transform-origin: top left;
+  transition: transform .5s linear;
+}
+.content p {
+  color: #333;
+  line-height: 1.5;
+}
+.content img {
+  width: 100%;
+}
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 99;
+  visibility: hidden;
+  transition: visibility 1.2s linear;
+}
+nav li {
+  margin: 40px 0;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.4s ease-in;
+}
+nav li i{
+  display: inline-block;
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  vertical-align: middle;
+}
+.icon-home {
+  background-image: url('../images/home.png');
+}
+.icon-personal {
+  background-image: url('../images/person.png');
+}
+.icon-email {
+  background-image: url('../images/Email.png');
+}
+nav li:nth-child(1) {
+  transform:translateX(calc(-100% - 40px));
+}
+nav li:nth-child(2) {
+  transform:translateX(calc(-170% - 40px ));
+  margin-left: 15px;
+}
+nav li:nth-child(3) {
+  transform:translateX(calc(-220% - 40px ));
+  margin-left: 30px;
+}
+.navShow {
+  visibility: visible;
+}
+nav.navShow li{
+  transform:translateX(0) !important;
+  transition-delay: .3s;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>rotating-navigation-animation</title>
+		<link rel="stylesheet" href="index.css" />
+		<link rel="stylesheet" href="./fonts/iconfont.css" />
+	</head>
+	<body>
+		<div class="circle">
+			<div class="circle-container">
+				<button id="close" class="close">
+					<i class="iconfont icon-closes"></i>
+				</button>
+				<button id="open" class="open">
+					<i class="iconfont icon-Menu"></i>
+				</button>
+			</div>
+		</div>
+		<div class="content">
+      <h1>Amazing Article</h1>
+      <em>Florin Pop</em>
+      <article>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quia in ratione dolores cupiditate, maxime aliquid impedit dolorem nam dolor omnis atque fuga labore modi veritatis porro laborum minus, illo, maiores recusandae cumque ipsa quos. Tenetur, consequuntur mollitia labore pariatur sunt quia harum aut. Eum maxime dolorem provident natus veritatis molestiae cumque quod voluptates ab non, tempore cupiditate? Voluptatem, molestias culpa. Corrupti, laudantium iure aliquam rerum sint nam quas dolor dignissimos in error placeat quae temporibus minus optio eum soluta cupiditate! Cupiditate saepe voluptates laudantium. Ducimus consequuntur perferendis consequatur nobis exercitationem molestias fugiat commodi omnis. Asperiores quia tenetur nemo ipsa.</p>
+        <h3>My Photo</h3>
+        <img src="https://gitee.com/littleJshao/figure-bed/raw/master/images/ndmz-1.jpg" alt="">
+      </article>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit libero deleniti rerum quo, incidunt vel consequatur culpa ullam. Magnam facere earum unde harum. Ea culpa veritatis magnam at aliquid. Perferendis totam placeat molestias illo laudantium? Minus id minima doloribus dolorum fugit deserunt qui vero voluptas, ut quia cum amet temporibus veniam ad ea ab perspiciatis, enim accusamus asperiores explicabo provident. Voluptates sint, neque fuga cum illum, tempore autem maxime similique laborum odio, magnam esse. Aperiam?
+      </p>
+    </div>
+    <nav class="navShow">
+      <ul>
+        <li class="home"><i class="icon-home"></i>Home</li>
+        <li class="personal"><i class="icon-personal"></i>About</li>
+        <li class="email"><i class="icon-email"></i>Contact</li>
+      </ul>
+    </nav>
+    <script>
+      let openBtn = document.querySelector('#open')
+      let closeBtn = document.querySelector('#close')
+      let btn = document.querySelector('.circle')
+      let content = document.querySelector('.content')
+      let nav = document.querySelector('nav')
+      openBtn.addEventListener('click',()=>{
+        btn.style.transform = 'rotate(-90deg)'
+        content.style.transform = 'rotate(-20deg)'
+        nav.classList.add('navShow')
+      })
+      closeBtn.addEventListener('click',()=>{
+        btn.style.transform = 'rotate(0)'
+        content.style.transform = 'rotate(0deg)'
+        nav.classList.remove('navShow')
+      })
+      
+    </script>
+	</body>
+</html>
