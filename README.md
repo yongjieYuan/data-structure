@@ -3,4 +3,5 @@
 + 案例一：[expanding cards](https://yongjieyuan.github.io/data-structure/50projects/expanding-Cards/index.html '伸缩卡片')
 + 案例二：[progress steps](https://yongjieyuan.github.io/data-structure/50projects/progress-steps/index.html '步骤条')
 + 案例三：[rotating-navigation-animation](https://yongjieyuan.github.io/data-structure/50projects/rotating-navigation-animation/index.html '导航动画')
++ 案例三：[hidden-search-widget](https://yongjieyuan.github.io/data-structure/50projects/hidden-search-widget/index.html '搜索框先小组件')
 
