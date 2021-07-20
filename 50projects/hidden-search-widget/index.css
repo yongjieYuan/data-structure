@@ -1,0 +1,44 @@
+body {
+  background-image: linear-gradient(90deg, #7d5fff, #7158e2);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+.container {
+  padding: 15px;
+}
+input {
+  outline: none;
+  font-size: 18px;
+  width: 0;
+  padding: 0;
+  border: none;
+  transition: width .3s ease;
+}
+div.search {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+.icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #fff;
+  cursor: pointer;
+}
+.text-input {
+  width: 200px;
+  padding: 15px;
+}
+.icon-search {
+  background-image: url(../images/search.png);
+  margin: 15px;
+}
